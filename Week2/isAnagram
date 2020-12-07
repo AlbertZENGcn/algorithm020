@@ -1,0 +1,18 @@
+class Solution {
+    public boolean isAnagram(String s, String t) {
+        //1.排序比较字数
+        //2. hashmap，存进去，碰到两者相同则删除
+        //3. unicode 做个26大小数组，然后统计个数，再比较个数是否相近
+        if(s.length()!=t.length()) {
+            return false;
+        }
+        char[] str1=s.toCharArray();
+        char[] str2=t.toCharArray();
+
+        Arrays.sort(str1);
+        Arrays.sort(str2);
+
+        if ( Arrays.equals(str1,str2)) return true;
+        else return false;
+    }
+}
